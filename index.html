@@ -28,6 +28,39 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* ── ACCESSIBILITY ── */
+        :focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: var(--gold);
+            color: var(--black);
+            padding: 1rem 1.5rem;
+            z-index: 9999;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 0 0 8px 0;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
         html { scroll-behavior: smooth; }
 
         body {
@@ -939,8 +972,10 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- NAV -->
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Main navigation">
         <div class="nav-inner">
             <a href="#" class="logo">
                 <img src="images/ctr logo.PNG" alt="Coweta Tote Rentals logo" class="logo-icon">
@@ -958,11 +993,12 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-heading">
         <div class="hero-content">
             <div class="hero-badge">⚡ Limited Sets Available Each Week — Reserve Early</div>
-            <h1>We Drop Off.<br>You Pack.<br><span>We Pick Up.</span></h1>
+            <h1 id="hero-heading">We Drop Off.<br>You Pack.<br><span>We Pick Up.</span></h1>
             <p class="hero-sub">Heavy-duty moving totes delivered to your door in Coweta County. No tape, no broken boxes, no landfill. Just pack, move, and we handle the rest. <em>Tote rental service — not a moving company.</em></p>
             <div class="hero-price">
                 <strong>&nbsp;$99</strong>&nbsp; · 20 Totes + Dolly · 2 Weeks · Free Delivery
@@ -1373,14 +1409,17 @@
         </div>
     </section>
 
+    </main>
+
     <!-- FOOTER -->
-    <footer>
+    <footer role="contentinfo">
         <a href="#" class="logo">
             <img src="images/ctr logo.PNG" alt="Coweta Tote Rentals logo" class="logo-icon">
             Coweta Tote Rentals
         </a>
         <p>&copy; 2026 Coweta Tote Rentals. All rights reserved. · Proudly family-owned in Coweta County, GA</p>
         <p style="margin-top: 0.5rem;"><a href="#pricing">Pricing</a> · <a href="#how">How It Works</a> · <a href="#contact">Contact</a></p>
+        <p style="margin-top: 0.75rem; font-size: 0.8rem;"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="accessibility.html">Accessibility</a></p>
     </footer>
 
     <script>

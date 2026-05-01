@@ -1244,14 +1244,14 @@
         <div class="section-inner center">
             <span class="section-label">Reserve Your Totes</span>
             <h2 class="section-title">Book Your Totes</h2>
-            <p class="section-sub">Fill out the form below and we'll confirm your date within a few hours. Once confirmed, we'll send you an invoice to complete your reservation.</p>
+            <p class="section-sub">Tell us a bit about your move — we'll follow up to confirm dates and send your invoice. No commitment yet.</p>
         </div>
         <form class="booking-form" name="booking" method="POST" data-netlify="true" id="agreementForm">
             <input type="hidden" name="form-name" value="booking">
 
-            <!-- CUSTOMER INFO -->
+            <!-- YOUR INFO -->
             <div class="form-section">
-                <div class="form-section-title">Customer Info</div>
+                <div class="form-section-title">Your Info</div>
                 <div class="form-group">
                     <label>Full Name <span class="required">*</span></label>
                     <input type="text" name="full_name" required placeholder="Your full name">
@@ -1266,10 +1266,6 @@
                         <input type="email" name="email" required placeholder="you@email.com">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label>Delivery Address <span class="required">*</span></label>
-                    <input type="text" name="address" required placeholder="123 Main St, Newnan, GA 30263">
-                </div>
             </div>
 
             <!-- RENTAL PACKAGE -->
@@ -1282,128 +1278,40 @@
                         <option value="1 Bedroom — 20 Totes + Dolly ($99)">1 Bedroom — 20 Totes + Dolly — $99</option>
                         <option value="2-3 Bedrooms — 40 Totes + Dolly ($149)">2–3 Bedrooms — 40 Totes + Dolly — $149</option>
                         <option value="4+ Bedrooms — 60 Totes + Dolly ($199)">4+ Bedrooms — 60 Totes + Dolly — $199</option>
-                        <option value="Custom Bundle — Email us">Custom Bundle — Tell us what you need in the notes below</option>
+                        <option value="Not sure yet — we'll discuss">Not sure yet — we'll discuss</option>
                     </select>
                 </div>
             </div>
 
-            <!-- DELIVERY & PICKUP DATES -->
+            <!-- ESTIMATED MOVE DATES -->
             <div class="form-section">
-                <div class="form-section-title">Delivery & Pickup</div>
+                <div class="form-section-title">Estimated Move Dates</div>
+                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 1.25rem;">No worries if these aren't final — we can always adjust before delivery.</p>
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Preferred delivery date <span class="required">*</span></label>
+                        <label>Estimated delivery date <span class="required">*</span></label>
                         <input type="date" name="delivery_date" required>
                     </div>
                     <div class="form-group">
-                        <label>Preferred pickup date <span class="required">*</span></label>
+                        <label>Estimated pickup date <span class="required">*</span></label>
                         <input type="date" name="pickup_date" required>
                     </div>
                 </div>
             </div>
 
-            <!-- DELIVERY NOTES -->
-            <div class="form-section">
-                <div class="form-section-title">Delivery Notes</div>
-                <div class="form-group">
-                    <label>Any delivery or pickup instructions? (optional)</label>
-                    <textarea name="delivery_notes" placeholder="e.g., gate code, stairs, leave in garage, etc."></textarea>
-                </div>
-            </div>
-
-            <!-- PAYMENT AUTHORIZATION -->
-            <div class="form-section">
-                <div class="form-section-title">Payment & Authorization</div>
-                <div class="checkbox-group">
-                    <label>
-                        <input type="checkbox" name="payment_understood" required>
-                        I understand an invoice will be sent after my date is confirmed, and payment is required before delivery
-                    </label>
-                </div>
-                <div class="checkbox-group">
-                    <label>
-                        <input type="checkbox" name="card_authorization" required>
-                        I authorize Coweta Tote Rentals to keep my payment method on file and charge for rental fees, late fees, lost or damaged equipment, and any agreed extensions without additional approval
-                    </label>
-                </div>
-            </div>
-
-            <!-- RENTAL TERMS -->
-            <div class="form-section">
-                <div class="form-section-title">Terms & Conditions</div>
-                <div class="terms-box">
-                    <h4>Equipment Responsibility</h4>
-                    <p>Customer assumes full responsibility for all rented totes and equipment from the time of delivery until pickup is completed. All items must be returned in the same condition as delivered, normal wear and tear excepted.</p>
-
-                    <h4>Damage or Loss</h4>
-                    <p>Customer agrees to the following replacement costs:</p>
-                    <ul>
-                        <li>Tote (bin + lid): $10 each</li>
-                        <li>Dolly: $100 each</li>
-                    </ul>
-                    <p>Any damaged or missing items will be charged to the card on file.</p>
-
-                    <h4>Late Returns</h4>
-                    <p>Equipment not ready for pickup on the scheduled date may result in additional charges: $5 per day or $35 per week (at company discretion).</p>
-
-                    <h4>Pickup Access</h4>
-                    <p>Customer agrees to ensure all rented items are empty, accessible, and ready for pickup on the scheduled date. If items are not accessible, additional fees may apply.</p>
-
-                    <h4>Proper Use</h4>
-                    <p>Totes may NOT be used for:</p>
-                    <ul>
-                        <li>Hazardous materials</li>
-                        <li>Liquids without proper sealing</li>
-                        <li>Illegal or damaging contents</li>
-                    </ul>
-                    <p>Customer is responsible for any damage caused by misuse.</p>
-
-                    <h4>Liability</h4>
-                    <p>Coweta Tote Rentals is not liable for injury resulting from use of equipment or damage to personal property during use. Customer assumes all risk associated with use.</p>
-
-                    <h4>Condition Acknowledgment</h4>
-                    <p>By signing, customer acknowledges that all items are delivered in clean and usable condition.</p>
-
-                    <h4>Changes / Extensions</h4>
-                    <p>If you need to extend your rental period, please contact us prior to your pickup date. Extensions are subject to availability and additional charges.</p>
-                </div>
-            </div>
-
-            <!-- AGREEMENT & SIGNATURE -->
-            <div class="form-section">
-                <div class="form-section-title">Agreement & Signature</div>
-                <div class="checkbox-group">
-                    <label>
-                        <input type="checkbox" name="agree_terms" required>
-                        I agree to the rental terms and conditions above
-                    </label>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Signature (type full name) <span class="required">*</span></label>
-                        <input type="text" name="signature" required placeholder="Type your full name" style="font-style: italic;">
-                    </div>
-                    <div class="form-group">
-                        <label>Date <span class="required">*</span></label>
-                        <input type="date" name="signature_date" required>
-                    </div>
-                </div>
-            </div>
-
-            <button type="submit" class="btn-submit">Submit Booking Request</button>
-            <p class="form-note">We'll confirm your date and send an invoice within a few hours. Payment is due before delivery.</p>
+            <button type="submit" class="btn-submit">Request Booking</button>
+            <p class="form-note">We'll follow up to confirm your dates and send your invoice. No payment due yet.</p>
         </form>
     </section>
 
     <!-- CONTACT / CTA -->
     <section class="contact" id="contact">
         <div class="section-inner center">
-            <span class="section-label">Ready to Move?</span>
-            <h2 class="section-title">Message to Schedule</h2>
-            <p class="section-sub">Pick your date, choose a package, and we'll drop off your totes. Got questions? We're just a message away.</p>
+            <span class="section-label">Got Questions?</span>
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-sub">Already know what you need? Use the booking form above. Have a question first? Send us an email and we'll get right back to you.</p>
             <div class="contact-btns">
-                <a href="https://calendly.com/YOUR-CALENDLY-LINK" target="_blank" class="btn-contact btn-contact-dark">📅 Book Your Drop-Off Date</a>
-                <a href="mailto:info@cowetatoterentals.com" class="btn-contact btn-contact-outline-dark">✉️ info@cowetatoterentals.com</a>
+                <a href="mailto:info@cowetatoterentals.com" class="btn-contact btn-contact-dark">✉️ info@cowetatoterentals.com</a>
             </div>
             <p class="contact-note">Local delivery only — serving Newnan, Peachtree City, Senoia & Sharpsburg, GA</p>
         </div>
@@ -1454,10 +1362,11 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams(new FormData(form)).toString()
-            }).then(() => {
-                form.innerHTML = '<div style="text-align:center;padding:3rem 0;"><div style="font-size:3rem;margin-bottom:1rem;">✅</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#D4A020;margin-bottom:0.5rem;">AGREEMENT SUBMITTED</h3><p style="color:rgba(255,255,255,0.7);">Thank you! We\'ll confirm your date and send an invoice to your email within a few hours.</p></div>';
+            }).then((response) => {
+                if (!response.ok) throw new Error('Submission failed');
+                form.innerHTML = '<div style="text-align:center;padding:3rem 0;"><div style="font-size:3rem;margin-bottom:1rem;">✅</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#D4A020;margin-bottom:0.5rem;">REQUEST RECEIVED</h3><p style="color:rgba(255,255,255,0.7);">Thank you! We\'ll follow up shortly to confirm your dates and send your invoice.</p></div>';
             }).catch(() => {
-                form.innerHTML = '<div style="text-align:center;padding:3rem 0;"><div style="font-size:3rem;margin-bottom:1rem;">✅</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#D4A020;margin-bottom:0.5rem;">AGREEMENT SUBMITTED</h3><p style="color:rgba(255,255,255,0.7);">Thank you! We\'ll confirm your date and send an invoice to your email within a few hours.</p></div>';
+                form.innerHTML = '<div style="text-align:center;padding:3rem 0;"><div style="font-size:3rem;margin-bottom:1rem;">⚠️</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#D4A020;margin-bottom:0.5rem;">SUBMISSION FAILED</h3><p style="color:rgba(255,255,255,0.7);">Sorry, something went wrong. Please try again, or email us directly at <a href="mailto:info@cowetatoterentals.com" style="color:#D4A020;">info@cowetatoterentals.com</a>.</p></div>';
             });
         });
     </script>

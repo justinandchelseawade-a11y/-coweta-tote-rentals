@@ -1365,8 +1365,10 @@
             }).then((response) => {
                 if (!response.ok) throw new Error('Submission failed');
                 form.innerHTML = '<div style="text-align:center;padding:3rem 0;"><div style="font-size:3rem;margin-bottom:1rem;">✅</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#D4A020;margin-bottom:0.5rem;">REQUEST RECEIVED</h3><p style="color:rgba(255,255,255,0.7);">Thank you! We\'ll follow up shortly to confirm your dates and send your invoice.</p></div>';
+                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }).catch(() => {
                 form.innerHTML = '<div style="text-align:center;padding:3rem 0;"><div style="font-size:3rem;margin-bottom:1rem;">⚠️</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#D4A020;margin-bottom:0.5rem;">SUBMISSION FAILED</h3><p style="color:rgba(255,255,255,0.7);">Sorry, something went wrong. Please try again, or email us directly at <a href="mailto:info@cowetatoterentals.com" style="color:#D4A020;">info@cowetatoterentals.com</a>.</p></div>';
+                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
         });
     </script>

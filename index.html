@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moving Box Rental Newnan GA | Coweta Tote Rentals — $99 for 20 Totes</title>
-    <meta name="description" content="Plastic moving boxes delivered in Newnan, Peachtree City, Senoia & Sharpsburg GA. Rent 20 heavy-duty totes + tote dolly for $99/2 weeks. Free drop-off & pickup. Family-owned local business.">
-    <meta name="keywords" content="moving box rental Newnan GA, plastic moving boxes near me, tote rental Coweta County, moving totes Peachtree City, reusable moving boxes Senoia">
+    <meta name="description" content="Plastic moving boxes delivered in Newnan, Senoia, Sharpsburg, Moreland, Tyrone, Peachtree City & all of Coweta County GA. Rent 20 heavy-duty totes + tote dolly for $99/2 weeks. Free drop-off & pickup. Family-owned local business.">
+    <meta name="keywords" content="moving box rental Newnan GA, plastic moving boxes near me, tote rental Coweta County, moving totes Peachtree City, reusable moving boxes Senoia, tote rental Tyrone GA, moving boxes Moreland GA">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&display=swap" rel="stylesheet">
@@ -969,7 +969,11 @@
             .photo-strip-inner { grid-template-columns: 1fr; }
             .photo-strip img { height: 280px; }
         }
+    
+        .zip-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; max-width: 820px; margin: 0 auto; }
+        .zip-chip { background: var(--dark-card); border: 1px solid rgba(212,160,32,0.4); color: var(--white-soft); padding: 0.6rem 1.1rem; border-radius: 50px; font-weight: 600; font-size: 0.95rem; }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -986,6 +990,7 @@
                 <a href="#pricing">Pricing</a>
                 <a href="#compare">Why Totes?</a>
                 <a href="#about">About</a>
+                <a href="#area">Area</a>
                 <a href="#contact">Contact</a>
                 <a href="#book" class="nav-cta">Reserve Now</a>
             </div>
@@ -1221,7 +1226,7 @@
                         </div>
                         <div class="value-card reveal">
                             <h4>🤝 Community First</h4>
-                            <p>Proudly serving Newnan, Peachtree City, Senoia & Sharpsburg</p>
+                            <p>Proudly serving Newnan, Senoia, Sharpsburg, Moreland, Tyrone, Peachtree City & all of Coweta County</p>
                         </div>
                         <div class="value-card reveal">
                             <h4>💪 Built to Last</h4>
@@ -1235,6 +1240,25 @@
                 </div>
                 <!-- Save your photo holding the tote as this filename -->
                 <img src="images/tote-stacked.JPG" alt="Heavy-duty totes stacked and ready to go" class="about-img reveal">
+            </div>
+        </div>
+    </section>
+
+    <!-- WHERE WE DELIVER -->
+    <section class="how-it-works" id="area">
+        <div class="section-inner center">
+            <span class="section-label">Where We Deliver</span>
+            <h2 class="section-title">Our Delivery Area</h2>
+            <p class="section-sub" style="margin-left:auto;margin-right:auto;">Free drop-off and pickup across Coweta County and the surrounding area. Outside this area? We still deliver for a small fee. Just DM us with any questions!</p>
+            <div id="map" style="height:420px;max-width:900px;margin:0 auto 2.5rem;border-radius:20px;border:2px solid rgba(212,160,32,0.3);"></div>
+            <div class="zip-grid">
+                <span class="zip-chip">Newnan · 30263 / 30265</span>
+                <span class="zip-chip">Sharpsburg · 30277</span>
+                <span class="zip-chip">Senoia · 30276</span>
+                <span class="zip-chip">Moreland · 30259</span>
+                <span class="zip-chip">Peachtree City · 30269</span>
+                <span class="zip-chip">Tyrone · 30290</span>
+                <span class="zip-chip">+ all of Coweta County</span>
             </div>
         </div>
     </section>
@@ -1313,7 +1337,7 @@
             <div class="contact-btns">
                 <a href="mailto:info@cowetatoterentals.com" class="btn-contact btn-contact-dark">✉️ info@cowetatoterentals.com</a>
             </div>
-            <p class="contact-note">Local delivery only — serving Newnan, Peachtree City, Senoia & Sharpsburg, GA</p>
+            <p class="contact-note">Local delivery only — serving Newnan, Senoia, Sharpsburg, Moreland, Tyrone, Peachtree City & all of Coweta County, GA</p>
         </div>
     </section>
 
@@ -1372,5 +1396,12 @@
             });
         });
     </script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  var cmap = L.map('map').setView([33.3807, -84.7997], 10);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '© OpenStreetMap contributors' }).addTo(cmap);
+  L.circle([33.3807, -84.7997], { radius: 32000, color: '#D4A020', fillColor: '#D4A020', fillOpacity: 0.12, weight: 2 }).addTo(cmap);
+  L.marker([33.3807, -84.7997]).addTo(cmap).bindPopup('Coweta Tote Rentals — Newnan, GA');
+</script>
 </body>
 </html>

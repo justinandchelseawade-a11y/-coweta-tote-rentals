@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Coweta Tote Rentals</title>
+    <meta name="description" content="Your tote rental booking request has been received. We'll follow up shortly to confirm your dates.">
+    <!-- Keep this page out of search results — it's only reached after a form submit -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&display=swap" rel="stylesheet">
+
+    <!-- Note: the Google tag is added to every page automatically by Netlify's
+         snippet injector, so it is NOT hardcoded here. In Google Ads, set the
+         conversion to fire on "Page load" of this /thank-you/ URL. -->
+
+    <style>
+        :root {
+            --dark: #1A1A1A;
+            --dark-card: #222222;
+            --gold: #D4A020;
+            --gold-bright: #E8B830;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--white);
+            background: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+        .card {
+            background: var(--dark-card);
+            border: 1px solid rgba(212,160,32,0.25);
+            border-radius: 20px;
+            padding: 3.5rem 2.5rem;
+            max-width: 540px;
+            width: 100%;
+        }
+        .check { font-size: 3.5rem; margin-bottom: 1.25rem; }
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.75rem;
+            letter-spacing: 1px;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            line-height: 1.05;
+        }
+        p { color: rgba(255,255,255,0.75); margin-bottom: 1rem; font-size: 1.05rem; }
+        .btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            background: var(--gold);
+            color: #111;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 0.9rem 2rem;
+            border-radius: 12px;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: var(--gold-bright); }
+        a.email { color: var(--gold); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="check" aria-hidden="true">✅</div>
+        <h1>Request Received</h1>
+        <p>Thank you! We've got your booking request and we'll follow up shortly to confirm your dates and send your invoice.</p>
+        <p>No payment is due yet. If you need us sooner, email <a class="email" href="mailto:info@cowetatoterentals.com">info@cowetatoterentals.com</a> or call (470) 683-2551.</p>
+        <a class="btn" href="/">Back to Home</a>
+    </main>
+</body>
+</html>
